@@ -19,6 +19,9 @@ android {
                 abiFilters 'armeabi'
             }
         }
+        ndk{
+            abiFilters 'armeabi'
+        }
     }
     buildTypes {
         release {
@@ -37,7 +40,10 @@ android {
     }
 
     sourceSets {
-        main.java.srcDirs += 'src/main/kotlin'
+        main {
+            jniLibs.srcDirs = ['libs']
+            java.srcDirs += 'src/main/kotlin'
+        }
     }
 
 }

@@ -45,7 +45,7 @@ void setMap() {
 
 extern "C"
 JNIEXPORT jstring JNICALL
-Java_com_xy_mvp_utils_JniTest_getStockMarketCode(
+Java_com_xy_mvp_utils_JniUtils_getStockMarketCode(
         JNIEnv *env,jclass type,
         jstring code/* this */) {
     string stock = env->GetStringUTFChars(code,NULL);
