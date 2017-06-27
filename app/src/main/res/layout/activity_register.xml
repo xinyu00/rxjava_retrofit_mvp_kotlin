@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/et_phone"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/login_et"
+        android:layout_marginTop="150dp"
+        android:background="@color/white"
+        android:hint="@string/phone"
+        android:inputType="phone"
+        android:paddingLeft="@dimen/big_margin"
+        android:paddingRight="@dimen/big_margin"
+        android:textColorHint="@color/hint"
+        android:textSize="@dimen/icon_text" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line"
+        android:background="@color/line" />
+
+    <EditText
+        android:id="@+id/et_password"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/login_et"
+        android:background="@color/white"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        android:paddingLeft="@dimen/big_margin"
+        android:paddingRight="@dimen/big_margin"
+        android:textColorHint="@color/hint"
+        android:textSize="@dimen/icon_text" />
+
+    <Button
+        android:id="@+id/bt_register"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/login_et"
+        android:layout_margin="@dimen/big_margin"
+        android:background="@drawable/blue_sure_button"
+        android:onClick="login"
+        android:text="@string/register"
+        style="@style/ButtonStyle"
+        android:textColor="@color/white"
+        android:textSize="@dimen/top_text" />
+</LinearLayout>

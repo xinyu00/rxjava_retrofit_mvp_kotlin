@@ -1,0 +1,26 @@
+<resources>
+    <!--App样式-->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/button_pro</item>
+        <item name="colorPrimaryDark">@color/button_pro</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:screenOrientation">portrait</item>
+    </style>
+
+    <!--dialog提示框样式-->
+    <style name="Hintdialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:backgroundDimAmount">0.6</item>
+    </style>
+
+    <style name="ButtonStyle">
+        <item name="android:gravity">center</item>
+    </style>
+
+</resources>

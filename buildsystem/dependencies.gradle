@@ -1,0 +1,44 @@
+allprojects {
+    repositories {
+        jcenter()
+    }
+}
+
+ext {
+    //Android
+    androidBuildToolsVersion = "24.0.1"
+    androidMinSdkVersion = 15
+    androidTargetSdkVersion = 21
+    androidCompileSdkVersion = 21
+
+    appDependencies = [
+            kotlin                  : "org.jetbrains.kotlin:kotlin-stdlib:${KOTLIN_VERSION}",
+            kotlinjre               : "org.jetbrains.kotlin:kotlin-stdlib-jre8:${KOTLIN_VERSION}",
+            appcompatV7             : "com.android.support:appcompat-v7:${APPCOMPAT_VERSION}",
+            design                  : "com.android.support:design:${APPCOMPAT_VERSION}",
+            recyclerview            : "com.android.support:recyclerview-v7:${APPCOMPAT_VERSION}",
+            rxjava                  : "io.reactivex.rxjava2:rxjava:${RXJAVA_VERSION}",
+            rxandroid               : "io.reactivex.rxjava2:rxandroid:${RXANDROID_VERSION}",
+            retrofit                : "com.squareup.retrofit2:retrofit:${RETROFIT_VERSION}",
+            okhttpLogging           : "com.squareup.okhttp3:logging-interceptor:${LOGGING_VERSION}",
+            retrofitConverterScalars: "com.squareup.retrofit2:converter-scalars:${RETROFIT_VERSION}",
+            retrofitAdapterRxjava   : "com.squareup.retrofit2:adapter-rxjava2:${RETROFIT_VERSION}",
+            butterknife             : "com.jakewharton:butterknife:${BUTTERKNIFE_VERSION}",
+            butterknifeCompiler     : "com.jakewharton:butterknife-compiler:${BUTTERKNIFE_VERSION}",
+            dagger                  : "com.google.dagger:dagger:${DAGGER_VERSION}",
+            daggerCompiler          : "com.google.dagger:dagger-compiler:${DAGGER_VERSION}",
+            fastjson                : "com.alibaba:fastjson:${FASTJSON_VERSION}",
+            fresco                  : "com.facebook.fresco:fresco:${FRESCO_VERSION}",
+            frescoOkhttp            : "com.facebook.fresco:imagepipeline-okhttp3:${FRESCO_VERSION}",
+            greendao                : "org.greenrobot:greendao-generator:${GREENDAO_VERSION}",
+            greendaoGenerator       : "org.greenrobot:greendao-generator:${GREENDAO_VERSION}"
+    ]
+
+    appTestDependencies = [
+            junit   : "junit:junit:${JUNIT_VERSION}",
+            espresso: "com.android.support.test.espresso:espresso-core:${ESPRESSO_VERSION}",
+    ]
+    developmentDependencies = [
+            leakCanary: "com.squareup.leakcanary:leakcanary-android:${LEAKCANARY_VERSION}",
+    ]
+}

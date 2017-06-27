@@ -1,0 +1,26 @@
+apply from: 'buildsystem/ci.gradle'
+apply from: 'buildsystem/dependencies.gradle'
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:${GRADLE_VERSION}"
+        classpath "org.greenrobot:greendao-gradle-plugin:${GREENDAO_VERSION}"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:${KOTLIN_VERSION}"
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+task runAcceptanceTests(dependsOn: [':presentation:connectedAndroidTest']) {
+    description 'Run application acceptance tests.'
+}
