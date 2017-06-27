@@ -23,9 +23,9 @@ class UserSelectUI : BaseActivity() {
     }
 
     override fun initData() {
-        baseActivityPresenter!!.requestPermission(arrayOf(Manifest.permission.WRITE_EXTERNAL_STORAGE), 6666)
+        baseActivityPresenter.requestPermission(arrayOf(Manifest.permission.WRITE_EXTERNAL_STORAGE), 6666)
         //        iv_content.setImageResource(R.mipmap.ic_launcher);
-        iv_content!!.setImageResource(R.mipmap.ic_launcher)
+        iv_content.setActualImageResource(R.mipmap.ic_launcher)
     }
 
     override fun permissionSuccess(requestCode: Int) {

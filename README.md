@@ -6,7 +6,7 @@
 ##### email: 963181974@qq.com
 
 
-####一、kotlin移植方式
+#### 一、kotlin移植方式
 1. 在项目的build.gradle中加入 
 ```
 buildscript {

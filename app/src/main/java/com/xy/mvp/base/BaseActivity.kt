@@ -70,12 +70,12 @@ abstract class BaseActivity : AppCompatActivity() {
      */
     override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<String>, grantResults: IntArray) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
-        if (requestCode == baseActivityPresenter!!.REQUEST_CODE_PERMISSION) {
-            if (baseActivityPresenter!!.verifyPermissions(grantResults)) {
-                permissionSuccess(baseActivityPresenter!!.REQUEST_CODE_PERMISSION)
+        if (requestCode == baseActivityPresenter.REQUEST_CODE_PERMISSION) {
+            if (baseActivityPresenter.verifyPermissions(grantResults)) {
+                permissionSuccess(baseActivityPresenter.REQUEST_CODE_PERMISSION)
             } else {
-                permissionFail(baseActivityPresenter!!.REQUEST_CODE_PERMISSION)
-                baseActivityPresenter!!.showTipsDialog()
+                permissionFail(baseActivityPresenter.REQUEST_CODE_PERMISSION)
+                baseActivityPresenter.showTipsDialog()
             }
         }
     }

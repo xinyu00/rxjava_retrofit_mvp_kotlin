@@ -15,11 +15,7 @@
  */
 package com.xy.mvp.dagger
 
-import java.lang.annotation.Retention
-
 import javax.inject.Scope
-
-import java.lang.annotation.RetentionPolicy.RUNTIME
 
 /**
  * A scoping annotation to permit objects whose lifetime should
@@ -27,5 +23,5 @@ import java.lang.annotation.RetentionPolicy.RUNTIME
  * correct component.
  */
 @Scope
-@Retention(RUNTIME)
+@kotlin.annotation.Retention()
 annotation class PerActivity

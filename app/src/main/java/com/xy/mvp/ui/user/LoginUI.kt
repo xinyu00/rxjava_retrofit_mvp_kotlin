@@ -5,16 +5,13 @@ import android.support.v4.content.ContextCompat
 import android.text.TextUtils
 import android.view.View
 import android.widget.EditText
-
+import butterknife.BindView
 import com.xy.mvp.R
 import com.xy.mvp.base.BaseActivity
 import com.xy.mvp.dagger.component.DaggerActivityComponent
 import com.xy.mvp.presenter.user.LoginUIPresenter
 import com.xy.mvp.utils.ToastUtils
-
 import javax.inject.Inject
-
-import butterknife.BindView
 
 /**
  * 登陆页
@@ -41,12 +38,12 @@ class LoginUI : BaseActivity() {
     //按钮点击
     fun login(view: View) {
         ToastUtils.errorShow(this, "吐司" + ++i)
-        val username = mUsername!!.text.toString()
-        val password = mPassword!!.text.toString()
+        val username = mUsername.text.toString()
+        val password = mPassword.text.toString()
         val checkUserInfo = checkUserInfo(username, password)
         if (checkUserInfo) {
             dialog!!.show()
-            presenter!!.login(username, password)
+            presenter.login(username, password)
         } else {
             ToastUtils.showShort(this, "用户名或密码不能为空" + ++i)
         }
@@ -65,7 +62,7 @@ class LoginUI : BaseActivity() {
 
     fun success() {
         dialog!!.dismiss()
-        ToastUtils.showShort(this, "欢迎回来：" + mUsername!!.text.toString())
+        ToastUtils.showShort(this, "欢迎回来：" + mUsername.text.toString())
     }
 
     fun failed() {
@@ -79,9 +76,5 @@ class LoginUI : BaseActivity() {
 
     override val layoutId: Int
         get() = R.layout.activity_login
-    //
-    //    @Override
-    //    public void onBackPressed() {
-    //        secondClickFinish();
-    //    }
+
 }
